@@ -10,8 +10,11 @@ class EmailParser
     @emails = emails
   end
 
+# takes a string of emails, splits them into arrays by 
+# matching comma (,) with zero or more of those instances and then any whitespaces.
+
   def parse
-    @emails.split(/,?\s/).uniq #takes a string of emails, splits them into arrays by matching comma (,) with zero or more of those instances and then any whitespaces.
+    @emails.split(/,?\s/).uniq
   end
 
 end
