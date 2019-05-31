@@ -6,12 +6,12 @@ require 'pry'
 class EmailParser
   attr_accessor :emails
 
-  def initialize(emails)
+  def initialize(emails) # "avi@test.com, arel@test.com"
     @emails = emails
   end
 
   def parse
-    @emails.split(/,?\s/).uniq
+    @emails.split(/,?\s/).uniq #takes a string of emails, splits them into arrays by matching comma (,) with zero or more of those instances and then any whitespaces.
   end
 
 end
